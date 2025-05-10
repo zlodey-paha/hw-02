@@ -106,11 +106,11 @@ systemctl restart zabbix-agent2
 systemctl enable zabbix-agent2
 ```
 
-`При необходимости прикрепитe сюда скриншоты
+`При необходимости прикрепитe сюда скриншоты`
 ![Мониторинг](https://github.com/zlodey-paha/hw-02/blob/main/monitor.png)
 ![Zabbix Log File](https://github.com/zlodey-paha/hw-02/blob/main/zabbix-log.png)
-![Мониторинг](https://github.com/zlodey-paha/hw-02/blob/main/monitor.png)`
-
+![Запрос данных с клиента](https://github.com/zlodey-paha/hw-02/blob/main/zabbix-client.png)
+![Запрос данных с сервера](https://github.com/zlodey-paha/hw-02/blob/main/zabbix-serv.png)
 
 ---
 
