@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "`Название занятия`" - `Фамилия и имя студента`
+# Домашнее задание к занятию "Система мониторинга Zabbix" - Попов Павел
 
 
 ### Инструкция по выполнению домашнего задания
@@ -82,10 +82,28 @@ echo "Пароль: zabbix"
 
 ```
 Поле для вставки кода...
-....
-....
-....
-....
+#!/bin/bash
+if [ "$(id -u)" -ne 0 ]; then
+	echo "Необходимы root права" >&2
+	exit 1
+fi
+
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+apt update
+apt install -y zabbix-agent2
+apt install -y zabbix-agent2-plugin-mongodb zabbix-agent2-plugin-mssql zabbix-agent2-plugin-postgresql
+
+echo "Настройка конфигурации"
+ZABBIX_SERVER="192.168.100.1"
+HOSTNAME=$(hostname)
+
+sed -i "s/^Server=.*/Server=$ZABBIX_SERVER/" /etc/zabbix/zabbix_agent2.conf
+sed -i "s/^ServerActive=.*/ServerActive=$ZABBIX_SERVER/" /etc/zabbix/zabbix_agent2.conf
+sed -i "s/^Hostname=.*/Hostname=$HOSTNAME/" /etc/zabbox/zabbix_agent2.conf
+
+systemctl restart zabbix-agent2
+systemctl enable zabbix-agent2
 ```
 
 `При необходимости прикрепитe сюда скриншоты
