@@ -42,8 +42,8 @@
 ```
 
 `При необходимости прикрепитe сюда скриншоты`
-![Вебка](https://github.com/zlodey-paha/hw-02/Panel.png)
-![Используемый код](https://github.com/zlodey-paha/hw-02/Code.png)
+![Вебка](https://github.com/zlodey-paha/hw-02/blob/main/Panel.png)
+![Используемый код](https://github.com/zlodey-paha/hw-02/blob/main/Code.png)
 
 ---
 
