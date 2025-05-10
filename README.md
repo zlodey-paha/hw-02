@@ -108,7 +108,7 @@ systemctl enable zabbix-agent2
 
 `При необходимости прикрепитe сюда скриншоты
 ![Мониторинг](https://github.com/zlodey-paha/hw-02/blob/main/monitor.png)
-![Мониторинг](https://github.com/zlodey-paha/hw-02/blob/main/monitor.png)
+![Zabbix Log File](https://github.com/zlodey-paha/hw-02/blob/main/zabbix-log.png)
 ![Мониторинг](https://github.com/zlodey-paha/hw-02/blob/main/monitor.png)`
 
 
